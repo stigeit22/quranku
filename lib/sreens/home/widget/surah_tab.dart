@@ -4,8 +4,14 @@ import 'package:quran_stige/model/surah_model.dart';
 import 'package:quran_stige/shared/utils/colors.dart';
 import 'package:quran_stige/sreens/details_surah/details_surah.dart';
 
-class SurahTab extends StatelessWidget {
+class SurahTab extends StatefulWidget {
   const SurahTab({super.key});
+
+  @override
+  State<SurahTab> createState() => _SurahTabState();
+}
+
+class _SurahTabState extends State<SurahTab> {
   Future<List<SurahModel>> _getSurah() async {
     String data = await rootBundle.loadString('assets/datas/list_surah.json');
     return surahModelFromJson(data);
@@ -42,12 +48,12 @@ class SurahTab extends StatelessWidget {
   Widget _surahItem(
           {required SurahModel surahModel, required BuildContext context}) =>
       GestureDetector(
+        behavior: HitTestBehavior.opaque,
         onTap: () {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => DetailsSurah(
                 noSurah: surahModel.nomor,
-                namelatin: surahModel.namaLatin,
               ),
             ),
           );
@@ -59,15 +65,17 @@ class SurahTab extends StatelessWidget {
               Container(
                 height: 36.0,
                 width: 36.0,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('assets/images/number.png'),
-                  ),
+                      image: AssetImage(
+                        'assets/images/number.png',
+                      ),
+                      invertColors: false),
                 ),
                 child: Center(
                   child: Text(
                     "${surahModel.nomor}",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 14.0,
                       color: white,
                       fontWeight: FontWeight.bold,
@@ -84,7 +92,7 @@ class SurahTab extends StatelessWidget {
                   children: [
                     Text(
                       surahModel.namaLatin,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16.0,
                         color: white,
                         fontWeight: FontWeight.bold,
@@ -97,7 +105,7 @@ class SurahTab extends StatelessWidget {
                       children: [
                         Text(
                           surahModel.tempatTurun.name,
-                          style: TextStyle(fontSize: 12.0, color: grey),
+                          style: const TextStyle(fontSize: 12.0, color: grey),
                         ),
                         const SizedBox(
                           width: 5.0,
@@ -107,14 +115,14 @@ class SurahTab extends StatelessWidget {
                           width: 5.0,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(5),
-                              color: purple),
+                              color: yellow),
                         ),
                         const SizedBox(
                           width: 5.0,
                         ),
                         Text(
                           "${surahModel.jumlahAyat} Ayat",
-                          style: TextStyle(fontSize: 12.0, color: grey),
+                          style: const TextStyle(fontSize: 12.0, color: grey),
                         ),
                       ],
                     ),
@@ -122,10 +130,10 @@ class SurahTab extends StatelessWidget {
                 ),
               ),
               Text(
-                surahModel.nama,
-                style: TextStyle(
+                surahModel.nama!,
+                style: const TextStyle(
                   fontSize: 20.0,
-                  color: purple_text,
+                  color: yellow,
                   fontWeight: FontWeight.bold,
                 ),
               ),

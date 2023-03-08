@@ -14,11 +14,11 @@ class NavigationScreen extends StatefulWidget {
 class _NavigationScreenState extends State<NavigationScreen> {
   late int _selectedIdex = 0;
   late final screen = [
-    HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
+    const HomeScreen(),
+    const HomeScreen(),
+    const HomeScreen(),
+    const HomeScreen(),
+    const HomeScreen(),
   ];
 
   void _selectedScreen(int index) {
@@ -33,11 +33,11 @@ class _NavigationScreenState extends State<NavigationScreen> {
       body: screen[_selectedIdex],
       bottomNavigationBar: CurvedNavigationBar(
         height: 50,
-        backgroundColor: white,
-        buttonBackgroundColor: purple,
+        backgroundColor: backgroundColor,
+        buttonBackgroundColor: yellow.withOpacity(.8),
         onTap: _selectedScreen,
-        color: dark_purple,
-        items: <Widget>[
+        color: black,
+        items: const <Widget>[
           ImageIcon(
             AssetImage('assets/images/home.png'),
             color: white,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran_stige/shared/utils/colors.dart';
 import 'package:quran_stige/shared/utils/navigations_screen.dart';
-import 'package:quran_stige/sreens/home/homescreen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -22,8 +21,8 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  "Quran App",
+                const Text(
+                  "Qur'anku",
                   style: TextStyle(
                     fontSize: 28.0,
                     color: white,
@@ -33,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 const SizedBox(
                   height: 16.0,
                 ),
-                Text(
+                const Text(
                   "Learn Quran \n and Recite once everyday",
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -52,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       width: MediaQuery.of(context).size.width,
                       height: 450,
                       decoration: BoxDecoration(
-                        color: purple,
+                        color: Colors.black,
                         borderRadius: BorderRadius.circular(30.0),
                       ),
                       child: Image.asset('assets/images/quran.png'),
@@ -63,25 +62,22 @@ class _SplashScreenState extends State<SplashScreen> {
                       right: 0,
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const NavigationScreen(),
-                            ),
-                          );
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => const NavigationScreen(),
+                          ));
                         },
                         child: Container(
                           margin: const EdgeInsets.symmetric(horizontal: 40.0),
                           height: 56.0,
                           decoration: BoxDecoration(
-                              color: green,
+                              color: yellow,
                               borderRadius: BorderRadius.circular(30.0)),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "Get Started",
                               style: TextStyle(
                                 fontSize: 24.0,
-                                color: backgroundColor,
+                                color: white,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),

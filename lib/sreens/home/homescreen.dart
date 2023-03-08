@@ -1,4 +1,3 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:quran_stige/shared/utils/colors.dart';
 import 'package:quran_stige/sreens/home/widget/header_home.dart';
@@ -20,19 +19,19 @@ class HomeScreen extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(
+          icon: const Icon(
             Icons.menu,
-            color: purple,
+            color: grey,
           ),
         ),
-        title: Text(
-          "Quran App",
+        title: const Text(
+          "Qur'anku",
           style: TextStyle(color: white, fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
               color: grey,
             ),
@@ -43,10 +42,10 @@ class HomeScreen extends StatelessWidget {
         length: 4,
         child: NestedScrollView(
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: HeaderHome(),
             ),
-            SliverAppBar(
+            const SliverAppBar(
               // shape: Border(
               //     bottom: BorderSide(color: purple.withOpacity(0.3))),
               backgroundColor: backgroundColor,
@@ -55,10 +54,10 @@ class HomeScreen extends StatelessWidget {
               pinned: true,
               primary: true,
               bottom: PreferredSize(
-                  child: TabbarHome(), preferredSize: Size.fromHeight(0)),
+                  preferredSize: Size.fromHeight(0), child: tabbarHome()),
             )
           ],
-          body: TabBarView(
+          body: const TabBarView(
             children: [
               SurahTab(),
               ParaTab(),

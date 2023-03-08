@@ -14,7 +14,7 @@ class HeaderHome extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             "Asslamualaikum",
             style: TextStyle(
               fontSize: 18.0,
@@ -22,8 +22,8 @@ class HeaderHome extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          Text(
-            "Stige IT",
+          const Text(
+            "Mulyana",
             style: TextStyle(
               fontSize: 24.0,
               color: white,
@@ -39,11 +39,11 @@ class HeaderHome extends StatelessWidget {
                 height: 131,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
-                  gradient: LinearGradient(
-                      stops: [0, 6],
+                  gradient: const LinearGradient(
+                      stops: [0, 3],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
-                      colors: [purple, dark_purple]),
+                      colors: [yellow, black]),
                 ),
               ),
               Positioned(
@@ -70,7 +70,7 @@ class HeaderHome extends StatelessWidget {
                         const SizedBox(
                           width: 5.0,
                         ),
-                        Text(
+                        const Text(
                           "Last Read",
                           style: TextStyle(fontSize: 14.0, color: white),
                         ),
@@ -79,7 +79,7 @@ class HeaderHome extends StatelessWidget {
                     const SizedBox(
                       height: 24.0,
                     ),
-                    Text(
+                    const Text(
                       "Al-Fatiah",
                       style: TextStyle(
                         fontSize: 18.0,
@@ -87,7 +87,7 @@ class HeaderHome extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(
+                    const Text(
                       "Ayah No: 1",
                       style: TextStyle(
                         fontSize: 14.0,

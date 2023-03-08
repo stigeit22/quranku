@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quran_stige/shared/utils/navigations_screen.dart';
+
 import 'package:quran_stige/shared/utils/splash.dart';
 
 void main() {

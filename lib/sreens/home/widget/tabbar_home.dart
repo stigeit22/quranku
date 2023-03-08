@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 
 import '../../../shared/utils/colors.dart';
 
-class TabbarHome extends StatelessWidget {
-  const TabbarHome({
+class tabbarHome extends StatelessWidget {
+  const tabbarHome({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return TabBar(
-        indicatorColor: purple,
+    return const TabBar(
+        indicatorColor: yellow,
         isScrollable: true,
         labelColor: white,
         labelStyle: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),

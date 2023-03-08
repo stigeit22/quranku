@@ -23,7 +23,7 @@ class SurahModel {
       required this.arti,
       required this.deskripsi,
       required this.audio,
-      required this.ayat});
+      this.ayat});
 
   final int nomor;
   final String nama;
@@ -45,7 +45,7 @@ class SurahModel {
         deskripsi: json["deskripsi"],
         audio: json["audio"],
         ayat: json.containsKey('ayat')
-            ? List<Ayat>.from(json["ayat"]!.map((x) => Ayat.fromJson(json)))
+            ? List<Ayat>.from(json['ayat']!.map((x) => Ayat.fromJson(x)))
             : null,
       );
 
