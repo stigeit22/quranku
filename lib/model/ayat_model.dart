@@ -32,4 +32,6 @@ class Ayat {
         "tr": tr,
         "idn": idn,
       };
+
+  static where(Function(dynamic element) param0) {}
 }

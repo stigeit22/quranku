@@ -1,0 +1,52 @@
+[
+    {
+        "nomor":1,
+        "title" :"Niat sholat Dhuha",
+        "arab": "أُصَلِّيْ سُنَّةَ الضُّحَى رَكْعَتَيْنِ للهِ تَعَالَى",
+        "latin":"Usholli sunnatadh dhuha rok'ataini lillaahi ta'aala",
+        "terjemah":"Aku niat shalat dhuha dua rakaat karena Allah Ta’ala,"
+    },
+    {
+        "nomor":2,
+        "title" :"Niat sholat Hajat",
+        "arab": "اُصَليْ سُنةَ الْحَاجَةِ رَكْعَتَيْنِ لِلهِ تَعَالَى",
+        "latin":"Ushollii sunnatal haajati rok’ataini lillaahi ta’aala",
+        "terjemah":"Saya shalat sunnah hajat dua rakaat karena Allah,"
+    },
+    {
+        "nomor":3,
+        "title" :"Niat sholat Istikharah",
+        "arab": "اُصَلِّيْ سُنَّةَ اْلاِسْتِخَارَةِ رَكْعَتَيْنِ للهِ تَعَالَى",
+        "latin":"Ushollii sunnatal istikhaarati rok’ataini lillaahi ta’aala.",
+        "terjemah":"Saya shalat sunnah istikharah dua rakaat karena Allah Ta’ala,"
+    },
+    {
+        "nomor":4,
+        "title" :"Niat sholat Tahajud",
+        "arab": "اُصَلِّى سُنَّةً التَّهَجُّدِ رَكْعَتَيْنِ مُسْتَقْبِلَ الْقِبْلَةِ ِللهِ تَعَالَى",
+        "latin":"Usholli Sunnatan Tahajudi Rok’ataaini Mustaqbilal Qiblati Lillaahi Taa’ala",
+        "terjemah":"Aku sholat sunah tahajud dua rakaat menghadap kiblat karena Allah Ta’aala"
+    },
+    {
+        "nomor":5,
+        "title" :"Niat sholat Taubat",
+        "arab": "أُصَلِّيْ سُنَّةَ التَّوْبَةِ رَكْعَتَيْنِ لِلَّهِ تَعَالَى",
+        "latin":"Ushollii sunnatat taubati rok’ataini lillaahi ta’aalaa",
+        "terjemah":"Aku niat sholat sunnah taubat dua raka’at karena Allah Ta’ala"
+    },
+    {
+        "nomor":6,
+        "title" :"Niat sholat tasbih dengan empat rakaat",
+        "arab": "أُصَلِّيْ سُنَّةَ التَسْبِيْحِ أَرْبَعَ رَكَعَاتٍ لِلهِ تَعَالَى",
+        "latin":"Usholli sunnat tasbiihi arba’a raka‘aatin lillaahi ta’aala.",
+        "terjemah":"Aku shalat sunnah tasbih empat rakaat karena Allah. "
+    },
+    {
+        "nomor":7,
+        "title" :"Niat sholat tahiyatul masjid",
+        "arab": "اُصَلِّى سُنَّةً تَحِيَّة الْمَسْجِدِ رَكْعَتَيْنِ لِلّٰهِ تَعَالَى",
+        "latin":"Usholli sunnata tahiyyatil masjidi rok’ataini lillaahi ta’aalaa",
+        "terjemah":"Aku berniat sholat untuk menghormati masjid sebanyak dua rakaat karena Allah ta’ala."
+    }
+   
+]

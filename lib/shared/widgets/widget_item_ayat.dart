@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quran_stige/model/surah_model.dart';
 import 'package:quran_stige/shared/utils/colors.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../../model/ayat_model.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -36,24 +37,38 @@ class _WidgetItemAyatState extends State<WidgetItemAyat> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  height: 27.0,
-                  width: 27.0,
-                  decoration: BoxDecoration(
-                      color: white, borderRadius: BorderRadius.circular(13.0)),
+                  height: 36.0,
+                  width: 36.0,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage(
+                          'assets/images/number.png',
+                        ),
+                        invertColors: false),
+                  ),
                   child: Center(
                     child: Text(
                       widget.ayat.nomor.toString(),
                       style: const TextStyle(
-                          fontSize: 14.0,
-                          color: black,
-                          fontWeight: FontWeight.bold),
+                        fontSize: 14.0,
+                        color: white,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
                 Row(
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () async {
+                        await Share.share(
+                          widget.ayat.ar +
+                              "\n" +
+                              widget.ayat.idn +
+                              ' \n "Quranku by Stiget IT"',
+                          subject: 'Ayat',
+                        );
+                      },
                       icon: const Icon(
                         Icons.share,
                         size: 24.0,
@@ -86,19 +101,31 @@ class _WidgetItemAyatState extends State<WidgetItemAyat> {
             ),
           ),
           const SizedBox(
-            height: 10.0,
+            height: 15.0,
           ),
           Align(
             alignment: Alignment.centerLeft,
-            child: Text(
-              widget.ayat.idn,
-              textAlign: TextAlign.left,
-              style: const TextStyle(fontSize: 16.0, color: white),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  widget.ayat.tr,
+                  textAlign: TextAlign.left,
+                  style: const TextStyle(fontSize: 14.0, color: grey),
+                ),
+                const SizedBox(
+                  height: 5.0,
+                ),
+                Text(
+                  widget.ayat.idn,
+                  textAlign: TextAlign.left,
+                  style: const TextStyle(fontSize: 14.0, color: white),
+                ),
+              ],
             ),
           ),
         ],
       ),
     );
-    ;
   }
 }
